@@ -1,0 +1,45 @@
+# WordPress core (not custom code)
+/wp-admin/
+/wp-includes/
+/wp-*.php
+/index.php
+/license.txt
+/readme.html
+/xmlrpc.php
+/wp-config.php
+
+# Studio / SQLite local runtime
+/wp-content/database/
+/wp-content/db.php
+/wp-content/upgrade/
+
+# Large / non-code content — do not commit
+/wp-content/uploads/
+/wp-content/ai1wm-backups/
+
+# Third-party plugins (installed via WP.org, not custom code)
+/wp-content/plugins/advanced-custom-fields/
+/wp-content/plugins/advanced-custom-fields-pro/
+/wp-content/plugins/akismet/
+/wp-content/plugins/all-in-one-wp-migration/
+/wp-content/plugins/classic-editor/
+/wp-content/plugins/really-simple-ssl/
+/wp-content/plugins/wp-statistics/
+/wp-content/plugins/mcp-adapter/
+
+# Default WP themes (unused, not customized)
+/wp-content/themes/twentytwentyfour/
+/wp-content/themes/twentytwentythree/
+
+# Local Claude Code settings (per-machine, not shared)
+/.claude/settings.local.json
+
+# OS / editor cruft
+.DS_Store
+.vscode/
+
+# stray files
+/--element
+/--full-page
+/--wait
+/ENDOFFILE
