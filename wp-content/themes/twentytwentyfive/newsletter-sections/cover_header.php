@@ -26,17 +26,17 @@ $nav_targets = array( '#q3-special-news', '#q3-whats-happening', '#q3-upcoming-e
 		<?php foreach ( array_values( $nav_links ) as $i => $label ) : ?>
 			<a class="q3-cover__nav-link" href="<?php echo esc_attr( $nav_targets[ $i ] ?? '#q3-contact' ); ?>" style="left:<?php echo esc_attr( $nav_left[ $i ] ?? 0 ); ?>px;"><?php echo esc_html( $label ); ?></a>
 		<?php endforeach; ?>
-		<a class="q3-cover__contact-btn" href="https://fls-group.com/contact/"><?php echo esc_html( $data['contact_button_text'] ); ?></a>
+		<a class="q3-cover__contact-btn" href="https://fls-group.com/contact/" data-fls-track="cta_click" data-fls-label="contact_team"><?php echo esc_html( $data['contact_button_text'] ); ?></a>
 		<button type="button" class="q3-cover__menu-icon" aria-expanded="false" aria-controls="q3-mobile-menu" aria-label="Open navigation"><i></i><i></i><i></i></button>
 		<div id="q3-mobile-menu" class="q3-cover__mobile-menu" aria-hidden="true">
 			<?php foreach ( array_values( $nav_links ) as $i => $label ) : ?>
 				<a href="<?php echo esc_attr( $nav_targets[ $i ] ?? '#q3-contact' ); ?>"><?php echo esc_html( $label ); ?></a>
 			<?php endforeach; ?>
-			<a class="q3-cover__mobile-contact" href="https://fls-group.com/contact/"><?php echo esc_html( $data['contact_button_text'] ); ?></a>
+			<a class="q3-cover__mobile-contact" href="https://fls-group.com/contact/" data-fls-track="cta_click" data-fls-label="contact_team"><?php echo esc_html( $data['contact_button_text'] ); ?></a>
 		</div>
 </nav>
 
-<div class="q3-cover">
+<div class="q3-cover" data-fls-section="cover">
 	<div class="q3-cover__masthead">
 		<div class="q3-cover__eyebrow-row">
 			<span class="q3-cover__rule"></span>

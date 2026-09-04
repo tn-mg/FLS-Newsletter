@@ -29,7 +29,7 @@ $trading_top      = $image( $trading['image_top'] );
 $trading_bottom   = $image( $trading['image_bottom'] );
 $rail_width       = $cards ? ( ( count( $cards ) - 1 ) * 1300.764 ) + 1263 : 0;
 ?>
-<section id="q3-whats-happening" class="q3-whats-happening" aria-labelledby="q3-whats-happening-title">
+<section id="q3-whats-happening" class="q3-whats-happening" aria-labelledby="q3-whats-happening-title" data-fls-section="project_updates">
 	<h2 id="q3-whats-happening-title" class="q3-whats-happening__section-title"><?php echo esc_html( $data['section_title'] ); ?></h2>
 	<div class="q3-whats-happening__rule" aria-hidden="true"></div>
 	<p class="q3-whats-happening__intro"><?php echo esc_html( $data['intro_text'] ); ?></p>
@@ -46,7 +46,7 @@ $rail_width       = $cards ? ( ( count( $cards ) - 1 ) * 1300.764 ) + 1263 : 0;
 	<div class="q3-whats-happening__luzon-video">
 		<?php if ( $luzon_video ) : ?>
 			<template class="q3-whats-happening__luzon-video-template"><?php echo wp_kses( $luzon_video, array( 'iframe' => array( 'title' => true, 'width' => true, 'height' => true, 'src' => true, 'frameborder' => true, 'allow' => true, 'referrerpolicy' => true, 'allowfullscreen' => true ) ) ); ?></template>
-			<button type="button" class="q3-whats-happening__luzon-video-trigger" aria-label="<?php echo esc_attr( 'Play video: ' . $luzon['title'] ); ?>">
+			<button type="button" class="q3-whats-happening__luzon-video-trigger" aria-label="<?php echo esc_attr( 'Play video: ' . $luzon['title'] ); ?>" data-fls-track="video_play" data-fls-video="luzon_project">
 				<img class="q3-whats-happening__luzon-video-background" src="<?php echo esc_url( $luzon_background['url'] ); ?>" alt="<?php echo esc_attr( $luzon_background['alt'] ); ?>">
 				<img class="q3-whats-happening__luzon-video-play" src="<?php echo esc_url( $luzon_play['url'] ); ?>" alt="" aria-hidden="true">
 			</button>

@@ -24,6 +24,7 @@ if ( $is_legacy && $legacy_folder ) {
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 	<?php
 		// Sections are built one at a time as individual ACF Group fields (ACF

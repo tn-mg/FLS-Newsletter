@@ -16,7 +16,7 @@ $cards      = $data['cards'] ?? array();
 $arrow      = $image( $data['arrow_icon'] );
 $rail_width = $cards ? ( ( count( $cards ) - 1 ) * 1300.764 ) + 1263 : 0;
 ?>
-<section id="q3-sponsorships" class="q3-sponsorships" aria-labelledby="q3-sponsorships-title">
+<section id="q3-sponsorships" class="q3-sponsorships" aria-labelledby="q3-sponsorships-title" data-fls-section="sponsorships">
 	<h2 id="q3-sponsorships-title" class="q3-section-heading"><?php echo esc_html( $data['section_title'] ); ?></h2>
 	<div class="q3-section-rule" aria-hidden="true"></div>
 	<div class="q3-sponsorships__intro"><?php echo wp_kses_post( $data['intro_copy'] ); ?></div>

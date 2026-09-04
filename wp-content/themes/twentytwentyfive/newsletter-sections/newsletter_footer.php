@@ -9,7 +9,7 @@ $map_url = wp_get_attachment_image_url( $data['map_image'], 'full' );
 $map_alt = get_post_meta( $data['map_image'], '_wp_attachment_image_alt', true );
 $email   = sanitize_email( $data['email'] );
 ?>
-<footer id="q3-contact" class="q3-newsletter-footer">
+<footer id="q3-contact" class="q3-newsletter-footer" data-fls-section="contact">
 	<h2><?php echo nl2br( esc_html( $data['title'] ) ); ?></h2>
 	<p class="q3-newsletter-footer__copy"><?php echo esc_html( $data['copy'] ); ?></p>
 	<a class="q3-newsletter-footer__email" href="mailto:<?php echo esc_attr( $email ); ?>"><span><?php echo esc_html( $data['email_label'] ); ?> <strong><?php echo esc_html( $email ); ?></strong></span></a>

@@ -26,7 +26,7 @@ $initial_positions = array(
 	'is-far-right',
 );
 ?>
-<section id="q3-people-matter" class="q3-people-matter" aria-labelledby="q3-people-matter-title">
+<section id="q3-people-matter" class="q3-people-matter" aria-labelledby="q3-people-matter-title" data-fls-section="people_matter">
 	<h2 id="q3-people-matter-title" class="q3-section-heading"><?php echo esc_html( $data['section_title'] ); ?></h2>
 	<div class="q3-section-rule" aria-hidden="true"></div>
 	<p class="q3-people-matter__label"><?php echo esc_html( $data['label'] ); ?></p>

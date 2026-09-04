@@ -31,7 +31,7 @@ if ( preg_match( '/<iframe[^>]+src=["\']([^"\']+)/i', $video_embed, $video_match
 	$video_src = 'https://www.youtube-nocookie.com/embed/' . $video_match[1];
 }
 ?>
-<section id="q3-special-news" class="q3-special-news" aria-labelledby="q3-special-news-title">
+<section id="q3-special-news" class="q3-special-news" aria-labelledby="q3-special-news-title" data-fls-section="special_news">
 	<h2 id="q3-special-news-title" class="q3-special-news__section-title"><?php echo esc_html( $data['section_title'] ); ?></h2>
 	<div class="q3-special-news__rule" aria-hidden="true"></div>
 
@@ -48,7 +48,7 @@ if ( preg_match( '/<iframe[^>]+src=["\']([^"\']+)/i', $video_embed, $video_match
 		<div class="q3-special-news__copy q3-special-news__award-copy-right"><?php echo wp_kses_post( $data['award_right_copy'] ); ?></div>
 	</div>
 	<?php if ( $data['award_cta_url'] ) : ?>
-		<a class="q3-special-news__cta" href="<?php echo esc_url( $data['award_cta_url'] ); ?>"><?php echo esc_html( $data['award_cta_label'] ); ?></a>
+		<a class="q3-special-news__cta" href="<?php echo esc_url( $data['award_cta_url'] ); ?>" data-fls-track="cta_click" data-fls-label="award_story"><?php echo esc_html( $data['award_cta_label'] ); ?></a>
 	<?php else : ?>
 		<span class="q3-special-news__cta"><?php echo esc_html( $data['award_cta_label'] ); ?></span>
 	<?php endif; ?>
@@ -91,7 +91,7 @@ if ( preg_match( '/<iframe[^>]+src=["\']([^"\']+)/i', $video_embed, $video_match
 	<div class="q3-special-news__video">
 		<?php if ( $video_src ) : ?>
 			<template class="q3-special-news__video-template"><iframe title="<?php echo esc_attr( $data['breakbulk_title'] ); ?>" src="<?php echo esc_url( $video_src ); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></template>
-			<button type="button" class="q3-special-news__video-trigger" aria-label="<?php echo esc_attr( 'Play video: ' . $data['breakbulk_title'] ); ?>">
+			<button type="button" class="q3-special-news__video-trigger" aria-label="<?php echo esc_attr( 'Play video: ' . $data['breakbulk_title'] ); ?>" data-fls-track="video_play" data-fls-video="breakbulk_event">
 				<img class="q3-special-news__video-poster" src="<?php echo esc_url( $video_poster['url'] ); ?>" alt="<?php echo esc_attr( $video_poster['alt'] ); ?>">
 				<img class="q3-special-news__video-play" src="<?php echo esc_url( $video_play['url'] ); ?>" alt="" aria-hidden="true">
 			</button>

@@ -19,7 +19,7 @@ $oktoberfest_mobile = $image( $data['oktoberfest_mobile_image'] ?: $data['oktobe
 $golf_tournament_mobile = $image( $data['golf_tournament_mobile_image'] ?: $data['golf_tournament_image'] );
 $company_trip_mobile = $image( $data['company_trip_mobile_image'] ?: $data['company_trip_image'] );
 ?>
-<section id="q3-upcoming-events" class="q3-upcoming-events" aria-labelledby="q3-upcoming-events-title">
+<section id="q3-upcoming-events" class="q3-upcoming-events" aria-labelledby="q3-upcoming-events-title" data-fls-section="upcoming_events">
 	<h2 id="q3-upcoming-events-title" class="q3-section-heading"><?php echo esc_html( $data['section_title'] ); ?></h2>
 	<div class="q3-section-rule" aria-hidden="true"></div>
 
